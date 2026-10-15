@@ -1,10 +1,10 @@
 # BookedIn
 
-[Otwórz aplikację → bookedin.pages.dev](https://bookedin.pages.dev/)
-
 **Booked in. Booked up. Bookish.**
 
 Wyszukiwarka klubów książki i spotkań literackich dla Pruszkowa i Warszawy. Cały interfejs jest po polsku, nie wymaga konta, a opublikowany katalog zawiera wyłącznie wydarzenia potwierdzone w publicznych źródłach organizatorów.
+
+(https://bookedin.pages.dev/)
 
 ## Uruchomienie
 
