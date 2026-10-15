@@ -3,3 +3,19 @@ dist/
 backend/data/
 .DS_Store
 *.log
+
+# Local builds, exports and reference photos are not application source.
+*.tsbuildinfo
+work/
+outputs/
+.openai/
+.wrangler/
+
+# Keep credentials and local configuration out of GitHub.
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+*.pem
+*.key

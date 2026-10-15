@@ -1,0 +1,9 @@
+{
+  "name": "bookedin-updates",
+  "main": "backend/cloud-worker.ts",
+  "compatibility_date": "2026-10-15",
+  "workers_dev": true,
+  "triggers": { "crons": ["0,3,6,9 6,7 * * *"] },
+  "kv_namespaces": [{ "binding": "BOOKEDIN_CATALOG", "id": "3b7d8837f2e341249e30a7c79f83379d" }],
+  "observability": { "enabled": true }
+}

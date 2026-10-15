@@ -1,7 +1,7 @@
 export type City = 'Pruszków' | 'Warszawa'
 export type EventStatus = 'confirmed' | 'needs_verification' | 'changed' | 'cancelled'
 
-export interface BookEvent {
+export interface BookEvent extends EventMetadata {
   id: string
   title: string
   organizer: string
@@ -26,6 +26,8 @@ export interface SourceInfo {
   method: string
   note: string
   lastCheckedAt?: string
+  automated?: boolean
+  lastAttemptAt?: string
 }
 
 export interface Notice {
@@ -37,3 +39,4 @@ export interface Notice {
   eventId?: string
   read?: boolean
 }
+import type { EventMetadata } from '../shared/event-metadata'
