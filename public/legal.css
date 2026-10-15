@@ -1,0 +1,19 @@
+@import url('/fonts.css');
+:root { color-scheme: light; font-family: 'Hanken Grotesk', sans-serif; color: #243c51; background: #fcfcf9; line-height: 1.75; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 28px 24px 60px; }
+header, main, footer { max-width: 760px; margin-inline: auto; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 22px; border-bottom: 1px solid #dae0e2; }
+.brand { font-size: 25px; font-weight: 800; letter-spacing: -1px; text-decoration: none; }
+a { color: #36678e; text-underline-offset: 4px; overflow-wrap: anywhere; }
+a:focus-visible { outline: 2px solid #36678e; outline-offset: 5px; }
+h1 { margin: 34px 0 8px; font-size: clamp(30px, 6vw, 42px); line-height: 1.2; letter-spacing: -1px; }
+h2 { font-size: 21px; margin: 28px 0 8px; line-height: 1.4; }
+p { margin: 10px 0; }
+li { margin: 7px 0; }
+.updated { color: #677681; font-size: 13px; }
+.summary { padding: 18px 22px; border: 1px solid #dae0e2; border-radius: 6px; background: #edf2f5; margin: 24px 0; }
+.summary p { margin: 0; }
+code { font-size: .86em; overflow-wrap: anywhere; }
+footer { border-top: 1px solid #dae0e2; margin-top: 34px; padding-top: 18px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; }
+@media (max-width: 420px) { body { padding-inline: 18px; } header { font-size: 13px; } .summary { padding: 15px; } ul { padding-left: 22px; } }

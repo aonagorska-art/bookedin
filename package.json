@@ -7,7 +7,8 @@
     "dev": "concurrently -n API,WEB -c magenta,cyan \"pnpm dev:api\" \"pnpm dev:web\"",
     "dev:web": "vite --host 0.0.0.0",
     "dev:api": "node --import tsx --watch backend/server.ts",
-    "build": "tsc -b && vite build",
+    "build": "node scripts/generate-notices.mjs && tsc -b && vite build",
+    "licenses": "node scripts/generate-notices.mjs",
     "start": "node --import tsx backend/server.ts",
     "test": "node --import tsx --test backend/**/*.test.ts",
     "check": "tsc -b --pretty false"

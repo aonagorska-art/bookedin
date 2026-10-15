@@ -1,9 +1,14 @@
-const CACHE = 'bookedin-v2-cat'
+const CACHE = 'bookedin-v3-local-fonts'
 const SHELL = ['/', '/manifest.webmanifest', '/icon.svg']
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting())))
-self.addEventListener('activate', event => event.waitUntil(self.clients.claim()))
+self.addEventListener('activate', event => event.waitUntil((async () => {
+  const oldCaches = (await caches.keys()).filter(name => /^bookedin-v\d/.test(name) && name !== CACHE)
+  await Promise.all(oldCaches.map(name => caches.delete(name)))
+  await self.clients.claim()
+})()))
 self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET' || event.request.url.includes('/api/')) return
+  const url = new URL(event.request.url)
+  if (event.request.method !== 'GET' || url.origin !== self.location.origin || url.pathname.includes('/api/')) return
   event.respondWith(fetch(event.request).then(response => {
     const copy = response.clone()
     if (response.ok) caches.open(CACHE).then(cache => cache.put(event.request, copy))

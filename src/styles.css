@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Hanken+Grotesk:wght@400;450;500;550;600;650;700;750;800&display=swap');
+@import url('/fonts.css');
 
 :root { font-family: 'Hanken Grotesk', sans-serif; color: #243c51; background: #fcfcf9; font-synthesis: none; line-height: 1.5; --paper: #fcfcf9; --ink: #243c51; --muted: #677681; --line: #dae0e2; --blue: #36678e; --pale: #edf2f5; }
 * { box-sizing: border-box; }

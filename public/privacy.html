@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jak BookedIn korzysta z pamięci przeglądarki i hostingu. Informacja techniczna o prywatności.">
+  <title>Prywatność — BookedIn</title><link rel="icon" href="/icon.svg"><link rel="stylesheet" href="/legal.css">
+</head>
+<body>
+  <header><a class="brand" href="/">bookedin.</a><a href="/">← Wróć do spotkań</a></header>
+  <main>
+    <h1>Prywatność, bez drobnego druku.</h1>
+    <p class="updated">Informacja techniczna · aktualizacja: 15 października 2026 r.</p>
+    <div class="summary"><p>Nie zakładasz konta. Twoje zapisane spotkania, preferencje miast i przykładowe powiadomienia pozostają w tej przeglądarce — aplikacja nie wysyła ich do swojego API.</p></div>
+    <section aria-labelledby="local"><h2 id="local">Co zostaje na Twoim urządzeniu</h2>
+      <ul>
+        <li><code>bookedin:saved</code> — identyfikatory zapisanych wydarzeń.</li>
+        <li><code>bookedin:cities</code> — wybrane miasta.</li>
+        <li><code>bookedin:notices</code> — lokalne powiadomienia demonstracyjne i ich stan przeczytania.</li>
+      </ul>
+      <p>Te informacje są zapisywane w <code>localStorage</code>, bez automatycznego terminu wygaśnięcia. Pozostają do usunięcia przez Ciebie lub przeglądarkę. Historia wyszukiwania i pozostałe filtry nie są zapisywane w tym magazynie ani wysyłane przez aplikację do API.</p>
+      <p>Przeglądarka może też przechowywać publiczne pliki aplikacji, np. grafiki, fonty i kod, w pamięci podręcznej obsługiwanej przez service worker. Dane z API nie są w niej zapisywane przez ten mechanizm.</p>
+      <p>Aby usunąć lokalne dane, wyczyść w ustawieniach przeglądarki dane witryny <strong>bookedin.pages.dev</strong>. Usunie to również Twoją półkę i preferencje. Wspólne urządzenie lub profil przeglądarki oznaczają dostęp innych użytkowników tego profilu do tych danych.</p>
+    </section>
+    <section aria-labelledby="network"><h2 id="network">Co dzieje się przy połączeniu</h2>
+      <p>Stronę i katalog wydarzeń obsługuje Cloudflare (Pages, Workers i KV). Przy otwarciu aplikacja pobiera publiczny katalog z API BookedIn, hostowanego w usłudze Cloudflare Workers. Zapytanie nie zawiera Twojej półki, wyszukiwanych haseł ani preferencji.</p>
+      <p>Obsługa połączenia wiąże się z przetwarzaniem danych technicznych, takich jak adres IP, czas i adres żądania oraz informacje o przeglądarce. Cloudflare może przetwarzać logi dla działania i bezpieczeństwa usług, także z użyciem infrastruktury poza EOG. Zakres, okres przechowywania i zabezpieczenia zależą od usługi i jej konfiguracji; nie deklarujemy, że żadne logi nie powstają. Więcej: <a href="https://www.cloudflare.com/privacypolicy/" rel="noreferrer">polityka prywatności Cloudflare</a>.</p>
+      <p>W tej wersji nie dodano narzędzi analityki marketingowej, pikseli reklamowych ani cookies ustawianych przez kod BookedIn. Fonty i ilustracje są hostowane razem ze stroną — wyświetlenie fontów nie wymaga połączenia z Google Fonts.</p>
+    </section>
+    <section aria-labelledby="outside"><h2 id="outside">Organizatorzy, kalendarz i powiadomienia</h2>
+      <p>Import wydarzeń odbywa się na serwerze. Nie przekazuje organizatorom danych o tym, co przeglądasz lub zapisujesz. Kliknięcie linku do organizatora przenosi Cię jednak do zewnętrznego serwisu, którego zasady prywatności obowiązują osobno.</p>
+      <p>Plik kalendarza ICS powstaje lokalnie i zawiera informacje o wybranym wydarzeniu. Dopiero jego dodanie do własnego kalendarza może przekazać je dostawcy tego kalendarza.</p>
+      <p>Powiadomienia push, subskrypcje e-mail i konta użytkowników nie są aktywne. Przykładowy alert działa lokalnie.</p>
+    </section>
+    <section aria-labelledby="scope"><h2 id="scope">O projekcie i zakresie informacji</h2>
+      <p>BookedIn jest niezależnym projektem. Ten dokument opisuje techniczne działanie obecnej wersji. Dane identyfikacyjne i kanał kontaktowy administratora nie zostały udostępnione; dokument nie stanowi pełnej informacji administratora wymaganej w każdym przypadku przez RODO.</p>
+      <p>Nie publikuj prywatnych danych w publicznych zgłoszeniach na GitHubie.</p>
+    </section>
+  </main>
+  <footer><a href="/">Spotkania</a><a href="/licenses.html">Licencje i źródła</a></footer>
+</body>
+</html>

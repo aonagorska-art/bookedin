@@ -1,0 +1,15 @@
+/* Unmodified fonts, self-hosted under SIL OFL 1.1. See /licenses.html. */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/HankenGrotesk-Variable.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/Caveat-Variable.ttf') format('truetype');
+}
