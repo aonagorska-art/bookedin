@@ -1,0 +1,13 @@
+{
+  "name": "BookedIn",
+  "short_name": "BookedIn",
+  "description": "Twoje następne spotkanie z książką.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F7FA",
+  "theme_color": "#4E6F8E",
+  "lang": "pl",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
