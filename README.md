@@ -54,4 +54,4 @@ pnpm build
 - `product/` — dokumentacja decyzji produktowych;
 - `public/` — manifest PWA, ikona i service worker.
 
-Projekt nie zawiera konfiguracji deploymentu i nie został opublikowany.
+Projekt jest opublikowany prywatnie pod adresem `https://bookedin.ao-nagorska.chatgpt.site`.
